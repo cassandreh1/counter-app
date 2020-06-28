@@ -26,7 +26,13 @@ class Counter extends Component {
   //   // updating the state
   //   this.setState({ value: this.state.value + 1 });
   // };
-
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevProps);
+    console.log(prevState);
+  }
+  componentWillUnmount() {
+    console.log("counter-unmount");
+  }
   // internally jsx expressions calls React.createElement() to generate the html
   // you would need a parent element
   // TO DO: research React.Fragment, replaces divs
